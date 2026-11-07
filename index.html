@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus — Каталог товарів</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page-container single-card-layout">
+      <div class="card">
+        <div class="catalog-top-bar">
+          <div>
+            <h1 class="brand-title">
+              <span>Focus</span> - магазин електроніки
+            </h1>
+            <p class="brand-subtitle">Прайс - лист</p>
+          </div>
+
+          <a
+            href="pages/cart.html"
+            class="cart-icon-btn"
+            title="Перейти до кошика"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              ></path>
+            </svg>
+            <span id="cartBadge" class="cart-badge">0</span>
+          </a>
+        </div>
+
+        <table class="catalog-table">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Товар</th>
+              <th>Ціна</th>
+            </tr>
+          </thead>
+          <tbody id="catalogBody"></tbody>
+        </table>
+
+        <div class="add-section">
+          <div class="form-row">
+            <div class="form-col grow">
+              <label for="productSelect" class="field-label"
+                >Обраний товар:</label
+              >
+              <select id="productSelect"></select>
+            </div>
+            <div class="form-col short">
+              <label for="productQty" class="field-label">Кількість:</label>
+              <input type="number" id="productQty" value="1" min="1" />
+            </div>
+          </div>
+
+          <div class="button-row" style="margin-top: 14px">
+            <button id="addToCartBtn" class="btn btn-primary" style="flex: 1">
+              Додати до кошика
+            </button>
+            <a
+              href="pages/cart.html"
+              id="viewCartBtn"
+              class="btn btn-secondary"
+              style="flex: 1"
+            >
+              Переглянути кошик
+            </a>
+          </div>
+
+          <div id="catalogNotification" class="notification-message"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
